@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "MetaBuddy",
+  "version": "1.0",
+  "description": "Analyze SEO meta tags and scripts from any webpage.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"]
+    }
+  ]
+}
