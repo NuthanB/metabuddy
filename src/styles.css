@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #0b1021;
+  --panel: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e8ecf7;
+  --muted: #9ba6c7;
+  --accent: #9ef0ff;
+  --accent-2: #7c5dff;
+  --card: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "SF Pro Display", "Segoe UI", sans-serif;
+  background: radial-gradient(120% 120% at 0% 0%, rgba(124, 93, 255, 0.3), transparent 40%),
+    radial-gradient(120% 120% at 100% 10%, rgba(158, 240, 255, 0.25), transparent 35%),
+    var(--bg);
+  color: var(--text);
+  min-width: 380px;
+}
+
+.app {
+  padding: 16px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(120deg, rgba(124, 93, 255, 0.16), rgba(158, 240, 255, 0.12));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 {
+  margin: 4px 0;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(158, 240, 255, 0.12);
+  border: 1px solid rgba(158, 240, 255, 0.4);
+  font-size: 12px;
+}
+
+.stats-grid {
+  margin: 14px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(4px);
+}
+
+.label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 6px 0 2px;
+  word-break: break-word;
+}
+
+.value.small {
+  font-size: 13px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.panel h3 {
+  margin: 2px 0 0;
+  font-size: 15px;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+  color: var(--text);
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.list-item {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.list-item .name {
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0 0 2px;
+}
+
+.list-item .content {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(158, 240, 255, 0.12);
+  border: 1px solid rgba(158, 240, 255, 0.3);
+  color: var(--accent);
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+.code-block {
+  font-family: "SFMono-Regular", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  font-size: 12px;
+  max-height: 160px;
+  overflow: auto;
+  white-space: pre-wrap;
+  color: var(--accent);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  background: linear-gradient(120deg, #7c5dff, #9ef0ff);
+  border: none;
+  color: #0b1021;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 12px;
+}

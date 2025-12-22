@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h2>MetaBuddy</h2>
-    <pre id="output">Loading...</pre>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Head inspector</p>
+          <h1>MetaBuddy</h1>
+          <p class="subtitle">Live view of meta, pixels, and scripts on this page.</p>
+        </div>
+        <div class="chip" id="tabHost">Loading...</div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <p class="label">Title</p>
+          <div class="value" id="titleStat">–</div>
+        </div>
+        <div class="stat-card">
+          <p class="label">Canonical</p>
+          <div class="value small" id="canonicalStat">–</div>
+        </div>
+        <div class="stat-card">
+          <p class="label">Meta tags</p>
+          <div class="value" id="metaCount">0</div>
+          <p class="muted" id="metaHint">Loading...</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">Trackers</p>
+          <div class="value" id="trackerCount">0</div>
+          <p class="muted" id="trackerSummary">Loading...</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">Google Tag Manager</p>
+          <div class="value" id="gtmStatus">Checking...</div>
+          <p class="muted" id="gtmId">—</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">NoScript fallbacks</p>
+          <div class="value" id="noscriptCount">0</div>
+          <p class="muted" id="noscriptHint">Checking...</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Meta tags</p>
+            <h3>Content in head</h3>
+          </div>
+          <span class="pill" id="linkCount">0 links</span>
+        </div>
+        <div id="metaList" class="list-grid empty">Gathering meta tags...</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Pixels & trackers</p>
+            <h3>Detections</h3>
+          </div>
+        </div>
+        <div id="trackerList" class="list-grid empty">Scanning for pixels...</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Google Tag Manager</p>
+            <h3>Container presence</h3>
+          </div>
+        </div>
+        <div id="gtmDetails" class="code-block">Checking for GTM...</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Scripts in head</p>
+            <h3>Loaded assets</h3>
+          </div>
+        </div>
+        <div id="scriptList" class="list-grid empty">Checking scripts...</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">JSON-LD</p>
+            <h3>Structured data</h3>
+          </div>
+        </div>
+        <div id="jsonList" class="code-block">Looking for structured data...</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Noscript</p>
+            <h3>Fallback snippets</h3>
+          </div>
+        </div>
+        <div id="noscriptList" class="list-grid empty">Checking for noscript fallbacks...</div>
+      </section>
+
+      <footer class="footer">
+        <button id="copyJson">Copy raw JSON</button>
+        <span id="copyStatus" class="muted"></span>
+      </footer>
+    </div>
 
     <script src="popup.js"></script>
   </body>
