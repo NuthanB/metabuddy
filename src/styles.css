@@ -58,6 +58,15 @@ body {
   flex-shrink: 0;
 }
 
+.header-logo {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(158, 240, 255, 0.4);
+  box-shadow: 0 0 20px 5px rgba(158, 240, 255, 0.3);
+}
+
 .hero h1 {
   margin: 4px 0;
   font-size: 20px;
@@ -239,15 +248,6 @@ button:active {
 .empty {
   color: var(--muted);
   font-size: 12px;
-}
-
-.logo {
-  max-width: 50px;
-  height: auto;
-  margin-bottom: 12px;
-  border-radius: 50%;
-  border: 2px solid rgba(158, 240, 255, 0.4);
-  box-shadow: 0 0 20px 5px rgba(158, 240, 255, 0.3);
 }
 
 .flex-container-column {
