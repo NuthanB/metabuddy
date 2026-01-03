@@ -74,7 +74,7 @@ function renderTrackers(trackers) {
       const rawSrc =
         tracker.detail === "inline" ? "Inline Tracker" : tracker.detail;
 
-      // Apply truncation here (limit set to 60 chars, adjust as needed)
+      // Apply truncation here (limit set to 80 chars, adjust as needed)
       detail.textContent = truncate(rawSrc, 80);
 
       // Optional: Add the full URL as a tooltip so users can still see it on hover
