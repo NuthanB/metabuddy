@@ -34,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 16px;
   background: linear-gradient(120deg, rgba(124, 93, 255, 0.16), rgba(158, 240, 255, 0.12));
   border: 1px solid var(--border);
@@ -55,6 +56,15 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   background: rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
+}
+
+.header-logo {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(158, 240, 255, 0.4);
+  box-shadow: 0 0 20px 5px rgba(158, 240, 255, 0.3);
 }
 
 .hero h1 {
@@ -165,12 +175,16 @@ body {
   border: 1px solid var(--border);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.03);
+  overflow-wrap: break-word;
+  overflow: hidden;
 }
 
 .list-item .name {
   font-weight: 600;
   font-size: 13px;
   margin: 0 0 2px;
+  overflow-wrap: break-word;
+  width: 90%;
 }
 
 .list-item .content {
@@ -234,4 +248,11 @@ button:active {
 .empty {
   color: var(--muted);
   font-size: 12px;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

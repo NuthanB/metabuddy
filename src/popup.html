@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="app">
       <header class="hero">
-        <div class="brand">
-          <div>
-            <p class="eyebrow">Head inspector</p>
-            <h1>MetaBuddy</h1>
-            <p class="subtitle">Live view of meta, pixels, and scripts on this page.</p>
-          </div>
+        <div>
+          <p class="eyebrow">Head inspector</p>
+          <h1>MetaBuddy</h1>
+          <p class="subtitle">
+            Live view of meta, pixels, and scripts on this page.
+          </p>
         </div>
-        <div class="chip" id="tabHost">Loading...</div>
+        <div class="flex-container-column">
+          <div>
+            <img src="../icons/logo.png" alt="MetaBuddy logo" class="header-logo" />
+          </div>
+          <div class="chip" id="tabHost">Loading...</div>
+        </div>
       </header>
 
       <section class="stats-grid">
@@ -66,7 +71,9 @@
             <h3>Detections</h3>
           </div>
         </div>
-        <div id="trackerList" class="list-grid empty">Scanning for pixels...</div>
+        <div id="trackerList" class="list-grid empty">
+          Scanning for pixels...
+        </div>
       </section>
 
       <section class="panel">
@@ -96,7 +103,9 @@
             <h3>Structured data</h3>
           </div>
         </div>
-        <div id="jsonList" class="code-block">Looking for structured data...</div>
+        <div id="jsonList" class="code-block">
+          Looking for structured data...
+        </div>
       </section>
 
       <section class="panel">
@@ -106,7 +115,9 @@
             <h3>Fallback snippets</h3>
           </div>
         </div>
-        <div id="noscriptList" class="list-grid empty">Checking for noscript fallbacks...</div>
+        <div id="noscriptList" class="list-grid empty">
+          Checking for noscript fallbacks...
+        </div>
       </section>
 
       <footer class="footer">
